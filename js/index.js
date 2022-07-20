@@ -218,7 +218,7 @@ function addProductCart(tite, prec, imagen) {
   for (let i = 0; i < cartNames.length; i++) {
       return;
   }
-  let cartContent = `   <figure class="tamanho-caixa">
+  let cartBoxContent = `   <figure class="tamanho-caixa">
   <img src=${imagen} alt="Jaqueta Masculina preta ">
   </figure>
   <section class="descricao-compra">
@@ -227,10 +227,10 @@ function addProductCart(tite, prec, imagen) {
   <button class="remove">Remover produto</button>  
   </section>
   </section>`
-  shopBox.innerHTML = cartContent
-  cartItems.append(shopBox)
-  console.log(shopBox)
-  shopBox.querySelectorAll(".remove")[0].addEventListener('click', removeCartItem);
+  cartShopBox.innerHTML = cartBoxContent
+  cartItems.append(cartShopBox)
+  console.log(cartShopBox)
+  cartShopBox.querySelectorAll(".remove")[0].addEventListener('click', removeCartItem);
   updatetotal()
 }
 function updatetotal() {
